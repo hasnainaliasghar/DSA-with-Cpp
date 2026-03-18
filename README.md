@@ -1,6 +1,6 @@
 <div align="center">
 
-![header](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&duration=1&pause=99999&color=00D9FF&center=true&vCenter=true&repeat=false&width=680&height=80&lines=DSA+with+C%2B%2B+%7C+From+Scratch)
+![header](header.svg)
 
 </div>
 
