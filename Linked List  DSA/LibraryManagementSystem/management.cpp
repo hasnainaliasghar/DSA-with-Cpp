@@ -1,5 +1,7 @@
 #include<iostream>
+#include<algorithm>
 #include<string>
+#include<queue>
 using namespace std;
 
 class Node{
@@ -15,6 +17,7 @@ class Node{
 
 class LinkedList{
     Node* head;
+    queue <string> waitingList;
     public:
     
     LinkedList(){
@@ -35,29 +38,53 @@ class LinkedList{
         temp -> next = newNode;
     }
 
-    void searchBook(string book){
-        int count = 1;
+    void sortBooks(){
+        if(head == nullptr) return;
+
+        bool swapped;
+        Node* current;
+        Node* lastptr = nullptr;
+
+        do{
+            swapped = false;
+            current = head;
+
+            while(current -> next != lastptr){
+                if(current->data > current->next ->data){
+                    swap(current->data, current -> next -> data);
+                    swapped = true;
+                }
+
+                current = current -> next;
+            }
+
+            lastptr = current;
+        }while(swapped);
+    }
+
+    bool searchBook(string book){
+        
         if(head == nullptr){
             cout<<"Add books first"<<endl;
-            return;
+            return false;
         }
 
+        int count = 1;
         Node* current = head;
-        if(current -> data == book){
-            cout<<"Found book at node "<<count<<endl;
-        }
 
         while(current != nullptr){
-            current = current -> next;
+            
             if(current -> data == book){
                 cout<<"Found Book at node "<<count<<endl;
-                return;
+                return true;
             }
+            current = current -> next;
             count ++;
+            
         }
 
         cout<<"Book is not added yet"<<endl;
-        return;
+        return false;
     }
 
     void printBooks(){
@@ -70,6 +97,15 @@ class LinkedList{
         cout<<endl;
     }
 
+    void addToWaitingList(string name) {
+        waitingList.push(name);
+        cout << name << " added to the waiting list.\n";
+    }
+
+    void showWaitingList() {
+        cout << "Waiting List Count: " << waitingList.size() << " people.\n";
+    }
+
 };
 
 int main(){
@@ -79,13 +115,21 @@ int main(){
     lib.add_book("Hobbit");
     lib.add_book("Forty rules of Love");
     lib.add_book("Rumi's Secret");
+    lib.add_book("Alice");
+    lib.sortBooks();
     lib.printBooks();
 
     cout<<endl<<"--Search Book--"<<endl;
     string search;
     cout<<"Enter book name: ";
     getline(cin,search);
+    bool found = lib.searchBook(search);
 
-    lib.searchBook(search);
+    //Adding to waiting list
+    if(found){
+        lib.addToWaitingList(search);
+        lib.showWaitingList();
+    }
+    
     return 0;
 }

@@ -1,4 +1,5 @@
 #include<iostream>
+#include<algorithm>
 using namespace std;
 
 class Node{
@@ -164,7 +165,27 @@ class List{
     }
 
     void bubblesort(){
-        Node* temp = head;
+        if(head == nullptr) return;
+
+
+        bool swapped;
+        Node* current;
+        Node* lastptr = nullptr;
+
+        do{
+            swapped = false;
+            current = head;
+
+            while(current -> next != lastptr){
+                if(current -> data > current -> next -> data){
+                    swap(current ->data , current ->next -> data);
+                    swapped = true;
+                }
+
+                current = current -> next;
+            }
+            lastptr = current;
+        }while (swapped);
         
     }
 
@@ -261,6 +282,9 @@ int main() {
     ll.reverse();
     ll.printList();
     ll.removeDuplicate();
+    ll.printList();
+
+    ll.bubblesort();
     ll.printList();
 
     return 0;
