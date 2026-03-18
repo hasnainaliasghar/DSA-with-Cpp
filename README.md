@@ -76,7 +76,7 @@ DSA-with-CPP/
 |---|-------|--------|------------|
 | 01 | **C++ Basics for DSA** | 🟡 In Progress | ⭐ Beginner |
 | 02 | **Arrays** | ⬜ Not Started | ⭐ Beginner |
-| 03 | **Linked Lists** | ⬜ Not Started | ⭐⭐ Easy |
+| 03 | **Linked Lists** | 🟡 In Progress | ⭐⭐ Easy |
 | 04 | **Stacks** | ⬜ Not Started | ⭐⭐ Easy |
 | 05 | **Queues** | ⬜ Not Started | ⭐⭐ Easy |
 | 06 | **Recursion** | ⬜ Not Started | ⭐⭐⭐ Medium |
@@ -138,7 +138,7 @@ Overall Progress:
 █░░░░░░░░░░░░░░░░░░░  5% — Just getting started!
 
 Arrays:          ░░░░░░░░░░  0%
-Linked Lists:    ░░░░░░░░░░  0%
+Linked Lists:    █░░░░░░░░░  5%
 Stacks:          ░░░░░░░░░░  0%
 Trees:           ░░░░░░░░░░  0%
 Graphs:          ░░░░░░░░░░  0%
