@@ -95,10 +95,43 @@ class LinkedList{
         removeDuplicate();
     }
 
+    void take_intersection(LinkedList &list2) {
+        LinkedList *list = &list2;
+        Node* current = head;
+        Node* prev = nullptr;
+
+        while (current != nullptr) {
+            bool found = false;
+            Node* runner = list ->head;
+            while (runner != nullptr) {
+                if (runner->data == current->data) {
+                    found = true;
+                    break;
+                }
+                runner = runner->next;
+            }
+
+            if (found) {
+                prev = current;
+                current = current->next;
+            } else {
+                if (prev != nullptr)
+                    prev->next = current->next;
+                else
+                    head = current->next;
+
+                Node* temp = current;
+                current = current->next;
+                delete temp;
+            }
+        }
+
+    }
+
 };
 
 int main(){
-    LinkedList list1, list2;
+    LinkedList list1, list2, list3;
     list1.push_back(1);
     list1.push_back(2);
     list1.push_back(3);
@@ -111,7 +144,14 @@ int main(){
     list2.push_back(6);
     list2.printList();
 
+    list3.push_back(1);
+    list3.push_back(2);
+    list3.push_back(3);
+
     list1.take_union(list2);
+    list1.printList();
+
+    list1.take_intersection(list3);
     list1.printList();
 
 }
