@@ -3,13 +3,17 @@
 #include<algorithm>
 using namespace std;
 
-void bubbleSort(string arr[], int size){
-    for(int i = 0; i<size-1;i++){
-        for(int j = 0; j<size-i-1; j++){
-            if(arr[j]>arr[j+1]){
-                swap(arr[j],arr[j+1]);
+void selectionSort(string arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int min_idx = i;
+        for (int j = i + 1; j < n; j++) {
+            // Find the string that comes first in the dictionary
+            if (arr[j] < arr[min_idx]) {
+                min_idx = j;
             }
         }
+        // Move the "earliest" string found to its correct position
+        swap(arr[min_idx], arr[i]);
     }
 }
 
@@ -38,7 +42,7 @@ int main() {
 
     cout<<endl;
 
-    bubbleSort(books,n);
+    selectionSort(books,n);
 
     cout<<endl;
 
