@@ -1,43 +1,6 @@
 <div align="center">
 
-<svg width="100%" viewBox="0 0 680 180" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#0f2744"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00D9FF"/>
-      <stop offset="100%" stop-color="#7B5EA7"/>
-    </linearGradient>
-    <linearGradient id="cppaccent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#7B5EA7"/>
-      <stop offset="100%" stop-color="#00599C"/>
-    </linearGradient>
-  </defs>
-  <rect width="680" height="180" fill="url(#bg)"/>
-  <g stroke="#ffffff" stroke-width="0.3" opacity="0.04">
-    <line x1="0" y1="36" x2="680" y2="36"/><line x1="0" y1="72" x2="680" y2="72"/>
-    <line x1="0" y1="108" x2="680" y2="108"/><line x1="0" y1="144" x2="680" y2="144"/>
-    <line x1="136" y1="0" x2="136" y2="180"/><line x1="272" y1="0" x2="272" y2="180"/>
-    <line x1="408" y1="0" x2="408" y2="180"/><line x1="544" y1="0" x2="544" y2="180"/>
-  </g>
-  <text font-family="monospace" font-size="80" fill="#00D9FF" opacity="0.08" x="18" y="148">{</text>
-  <text font-family="monospace" font-size="80" fill="#7B5EA7" opacity="0.08" x="618" y="148">}</text>
-  <rect x="0" y="0" width="680" height="3" fill="url(#accent)"/>
-  <circle cx="52" cy="40" r="3" fill="#00D9FF" opacity="0.5"/>
-  <circle cx="64" cy="40" r="3" fill="#00D9FF" opacity="0.3"/>
-  <circle cx="76" cy="40" r="3" fill="#00D9FF" opacity="0.15"/>
-  <circle cx="628" cy="140" r="3" fill="#7B5EA7" opacity="0.5"/>
-  <circle cx="616" cy="140" r="3" fill="#7B5EA7" opacity="0.3"/>
-  <circle cx="604" cy="140" r="3" fill="#7B5EA7" opacity="0.15"/>
-  <text font-family="monospace" font-size="11" fill="#00D9FF" opacity="0.5" x="42" y="28">// learning_journey.cpp</text>
-  <text font-family="monospace" font-size="58" font-weight="700" fill="url(#accent)" x="90" y="112" letter-spacing="-1">DSA</text>
-  <text font-family="monospace" font-size="20" fill="#ffffff" opacity="0.4" x="280" y="100">with</text>
-  <text font-family="monospace" font-size="52" font-weight="700" fill="url(#cppaccent)" x="332" y="112" letter-spacing="-1">C++</text>
-  <text font-family="monospace" font-size="12" fill="#ffffff" opacity="0.45" x="90" y="140" letter-spacing="2">LEARNING FROM SCRATCH  •  BY HASNAIN ALI ASGHAR</text>
-  <rect x="0" y="177" width="680" height="3" fill="url(#accent)" opacity="0.5"/>
-</svg>
+![header](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&duration=1&pause=99999&color=00D9FF&center=true&vCenter=true&repeat=false&width=680&height=80&lines=DSA+with+C%2B%2B+%7C+From+Scratch)
 
 </div>
 
