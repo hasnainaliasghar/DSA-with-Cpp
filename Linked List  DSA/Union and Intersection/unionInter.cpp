@@ -86,18 +86,32 @@ class LinkedList{
             current = current -> next;
         }
     }
+    
+    //Take union accepts 2 functions
+    void take_union(LinkedList &list){
+        //1. merging lists
+        mergeList(list);
+        //2. removing duplicates
+        removeDuplicate();
+    }
 
 };
 
 int main(){
     LinkedList list1, list2;
     list1.push_back(1);
+    list1.push_back(2);
+    list1.push_back(3);
+    list1.push_back(4);
     list1.printList();
 
-    list2.push_front(0);
+    list2.push_back(3);
+    list2.push_back(4);
+    list2.push_back(5);
+    list2.push_back(6);
     list2.printList();
 
-    list1.mergeList(list2);
+    list1.take_union(list2);
     list1.printList();
 
 }
