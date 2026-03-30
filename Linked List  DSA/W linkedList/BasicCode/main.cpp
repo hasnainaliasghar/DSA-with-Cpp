@@ -132,4 +132,5 @@ int main(){
     list.displayList();
     list.deleteByValue(2);
     list.displayList();
+    return 0;
 }
