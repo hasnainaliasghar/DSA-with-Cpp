@@ -77,7 +77,7 @@ DSA-with-CPP/
 | 01 | **C++ Basics for DSA** | 🟡 In Progress | ⭐ Beginner |
 | 02 | **Arrays** | ⬜ Not Started | ⭐ Beginner |
 | 03 | **Linked Lists** | 🟡 In Progress | ⭐⭐ Easy |
-| 04 | **Stacks** | ⬜ Not Started | ⭐⭐ Easy |
+| 04 | **Stacks** | 🟡 In Progress | ⭐⭐ Easy |
 | 05 | **Queues** | ⬜ Not Started | ⭐⭐ Easy |
 | 06 | **Recursion** | ⬜ Not Started | ⭐⭐⭐ Medium |
 | 07 | **Searching** | ⬜ Not Started | ⭐⭐ Easy |
@@ -135,11 +135,11 @@ Each topic folder follows this pattern:
 
 ```
 Overall Progress:
-█░░░░░░░░░░░░░░░░░░░  5% — Just getting started!
+██████░░░░░░░░░░░░░░░░  30% — Just getting started!
 
-Arrays:          ░░░░░░░░░░  0%
-Linked Lists:    █░░░░░░░░░  5%
-Stacks:          ░░░░░░░░░░  0%
+Arrays:          ████░░░░░░  20%
+Linked Lists:    ██░░░░░░░░  10%
+Stacks:          █░░░░░░░░░  5%
 Trees:           ░░░░░░░░░░  0%
 Graphs:          ░░░░░░░░░░  0%
 DP:              ░░░░░░░░░░  0%
