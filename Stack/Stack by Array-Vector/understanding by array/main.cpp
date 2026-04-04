@@ -31,6 +31,12 @@ class Stack{
             }
             cout<<"popped element"<<arr[top--];
         }
+
+        void print(){
+            for(int i = 0; i<5;i++){
+                cout<< arr[i]<<" ";
+            }
+        }
 };
 
 int main(){
@@ -44,4 +50,6 @@ int main(){
     cout<<s1.isempty()<<endl;
     cout<<s1.isfull()<<endl;
     s1.pop();
+
+    s1.print();
 }
