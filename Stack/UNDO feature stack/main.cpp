@@ -71,13 +71,13 @@ int main(){
         try {
             cin >> selection;
             if(!cin){
-                cin.clear();                        // clear the fail state
-                cin.ignore(1000, '\n');             // flush bad input from buffer
+                cin.clear();                        
+                cin.ignore(1000, '\n');             
                 throw runtime_error("Invalid input. Please enter a number.");
             }
         } catch (runtime_error& e){
             cout << e.what() << endl;
-            continue;                              // go back to menu instead of breaking
+            continue;                             
         }
 
         switch(selection){
