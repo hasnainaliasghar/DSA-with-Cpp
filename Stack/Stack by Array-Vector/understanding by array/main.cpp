@@ -1,55 +1,67 @@
-#include<iostream>
+#include <iostream>
+#include <string>
 using namespace std;
 
-class Stack{
-    int top;
-    int arr[5];
+const int MAX = 100;
+
+class Stack {
+    private:
+        int arr[MAX];
+        int top;
 
     public:
         Stack(){
             top = -1;
         }
 
-        bool isfull(){
-            return (top == 4);
+        bool isEmpty(){
+            if(top == -1)
+                return true;
+            return false;
         }
 
-        bool isempty(){
-            return (top==-1);
+        bool isFull(){
+            if(top == MAX-1)  
+                return true;
+            return false;
         }
+
         void push(int val){
-            if(isfull()){
-                cout<< "stack is full"<<endl;
+            if(isFull()){
+                cout<<"Stack is Full"<<endl;
                 return;
             }
-            arr[++top]  = val;
-        }
-        void pop(){
-            if(isempty()){
-                cout<<"Stack is empty"<<endl;
-                return;
-            }
-            cout<<"popped element"<<arr[top--];
+            arr[++top] = val;
+           
         }
 
-        void print(){
-            for(int i = 0; i<5;i++){
-                cout<< arr[i]<<" ";
+        void pop(){
+            if(isEmpty()){
+                cout<<"Stack is Empty"<<endl;
+                return;
             }
+            arr[top--];
         }
+
+        void printStack(){
+            for(int i = 0; i<= top;i++){
+                cout<<arr[i]<<" ";
+            }
+            cout<<endl;
+        }
+
 };
 
+
+
 int main(){
-    Stack s1;
-    s1.push(10);
-    s1.push(20);
-    s1.push(30);
-    s1.push(40);
-
-    cout<<endl;
-    cout<<s1.isempty()<<endl;
-    cout<<s1.isfull()<<endl;
-    s1.pop();
-
-    s1.print();
+    Stack stack;
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+   
+    stack.printStack();
+    stack.pop();
+    stack.printStack();
+    return 0;
 }
