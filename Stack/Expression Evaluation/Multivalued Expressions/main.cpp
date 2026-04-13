@@ -1,5 +1,6 @@
 #include<iostream>
 #include<math.h>
+#include<sstream>
 #include<string>
 using namespace std;
 
@@ -55,20 +56,22 @@ class Stack{
     }
 };
 
-int prefixEvaluation(string operation){
+int prefixevaluation(string expression){
     Stack s;
+    stringstream ss(expression);
+    string token;
 
-    for(int i = operation.length()-1; i>=0 ; i--){
-        
-        if(operation[i] >= '0' && operation[i] <= '9'){
-            s.push(operation[i]-'0');
+    while(ss >> token){
+
+        if(isdigit(stoi(token))){
+            s.push(stoi(token));
         } else {
-            int op1 = s.top();
+             int op1 = s.top();
             s.pop();
             int op2 = s.top();
             s.pop();
 
-            switch (operation[i])
+            switch (char(token[0]))
             {
             case '+':
                 s.push(op1+op2);
@@ -87,57 +90,12 @@ int prefixEvaluation(string operation){
                 break; 
             default:
                 break;
-            }
-            
         }
     }
-
-    return s.top();
-
+    
 }
-
-int postfixevaluation(string operation){
-    Stack s;
-
-    for(int i = 0; i< operation.length();i++){
-        if(operation[i] == ' ') continue;
-        if(isdigit(operation[i])){
-            s.push(operation[i] - '0');
-        } else {
-            int op2 = s.top();
-            s.pop();
-            int op1 = s.top();
-            s.pop();
-
-            switch (operation[i])
-            {
-            case '+':
-                s.push(op1+op2);
-                break;
-            case '-':
-                s.push(op1-op2);
-                break;
-            case '*':
-                s.push(op1*op2);
-                break;
-            case '/':
-                s.push(op1/op2);
-                break;
-            case '^':
-                s.push(pow(op1,op2));
-                break; 
-            default:
-                break;
-        }
-        }
-    }
-    return s.top();
 }
 
 int main(){
-    int answer = prefixEvaluation("-+7*45+20");
-    cout<<answer<<endl;
-
-    cout<< postfixevaluation("47+32*5-6**3/");
-    return 0;
+    cout<<prefixevaluation("+ 23 45");
 }
