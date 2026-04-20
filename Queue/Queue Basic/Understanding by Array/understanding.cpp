@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-const int MAX = 100;
+const int MAX = 5;
 
 class Queue {
 private:
@@ -67,10 +67,13 @@ int main() {
     queue.enqueue(20);
     queue.enqueue(30);
     queue.enqueue(40);
+    queue.enqueue(50);
 
     queue.printQueue();
 
     queue.dequeue();
+
+    queue.enqueue(60);
     queue.printQueue();
 
     return 0;
